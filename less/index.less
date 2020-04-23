@@ -3,7 +3,13 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+// variables
+@best-color: dodgerblue;
+// mixin
+.default-code {
+	display: flex;
+	justify-content: space-evenly;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -64,19 +70,27 @@ nav a{
     text-decoration: none;
     color: black;
     padding: 2.5rem;
+
+@media (max-width: 500px){
+	nav a{
+	flex-direction: column;
+	align-items: center; 
+    margin: 20%;   
+    line-height: 30px;
+  }
+ }
 }
 h1{
 	font-size:38px;
 	text-align: left;
-	color: dodgerblue;
+	color: @best-color;
 	// border: 1px solid black;
 }
 .image,.middle-content,.job,.skills{
 	// border: 1px solid black;
 	height: 50%;
-	display: flex;
+	.default-code();
 	flex-direction: column;
-	justify-content: space-evenly;
 	align-items: center;
       img{
 		  align-self: left;
@@ -90,10 +104,14 @@ h1{
 }
 .middle-content {
 	display: flex;
-	width: 50%
-	
+	width: 50%	
 
-}
+@media (max-width: 500px){
+	.middle-content p{
+		width:80%;
+	}
+   }
+ }
 .bottom-content h2{
     text-align: center;
     font-size: 20px;
@@ -105,25 +123,24 @@ h1{
     
 }
 .gallery {
-	display: flex;
-	justify-content: space-evenly;
+	.default-code();
 	flex-wrap: wrap;
 	align-self: auto;
 	width: 70%
 }
 .bottom-content{
-	display: flex;
-	justify-content: space-evenly;
+	// display: flex;
+	// justify-content: space-evenly;
 	// border: 1px solid black;
 	height: 50%;
-	display: flex;
-	justify-content: space-evenly;
+	.default-code();
 	align-items: center;
 	width: 60%
 	}
 	.work{
 		display:flex;
 		flex-direction: column;
+		
 	}
 
 
@@ -131,7 +148,7 @@ footer {
 	text-align: left;
 
 	div {
-	background-color: tomato;
+	background-color: @best-color;
 	// border: solid;
     width: 20%;
     padding: 2px

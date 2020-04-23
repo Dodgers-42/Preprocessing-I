@@ -140,6 +140,14 @@ nav a {
   color: black;
   padding: 2.5rem;
 }
+@media (max-width: 500px) {
+  nav a nav a {
+    flex-direction: column;
+    align-items: center;
+    margin: 20%;
+    line-height: 30px;
+  }
+}
 h1 {
   font-size: 38px;
   text-align: left;
@@ -202,7 +210,7 @@ footer {
   text-align: left;
 }
 footer div {
-  background-color: tomato;
+  background-color: dodgerblue;
   width: 20%;
   padding: 2px;
 }
