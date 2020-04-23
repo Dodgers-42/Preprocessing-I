@@ -136,21 +136,19 @@ body {
   height: 100%;
 }
 nav a {
-  text-align: center;
   text-decoration: none;
   color: black;
   padding: 2.5rem;
 }
 h1 {
-  font-size: 30px;
+  font-size: 38px;
+  text-align: left;
   color: dodgerblue;
-  border: 1px solid black;
 }
 .image,
 .middle-content,
 .job,
-.bottom-content {
-  border: 1px solid black;
+.skills {
   height: 50%;
   display: flex;
   flex-direction: column;
@@ -160,7 +158,7 @@ h1 {
 .image img,
 .middle-content img,
 .job img,
-.bottom-content img {
+.skills img {
   align-self: left;
 }
 .top-content {
@@ -170,8 +168,8 @@ h1 {
   box-sizing: 20px;
 }
 .middle-content {
-  /* display: flex; */
-  justify-content: left;
+  display: flex;
+  width: 50%;
 }
 .bottom-content h2 {
   text-align: center;
@@ -179,8 +177,8 @@ h1 {
 }
 .job {
   display: flex;
-  justify-content: center;
-  /* text-align: center; */
+  margin: 10%;
+  padding: 2%;
 }
 .gallery {
   display: flex;
@@ -189,12 +187,22 @@ h1 {
   align-self: auto;
   width: 70%;
 }
+.bottom-content {
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+}
+.work {
+  display: flex;
+  flex-direction: column;
+}
 footer {
   text-align: left;
 }
 footer div {
   background-color: tomato;
-  border: solid;
   width: 20%;
   padding: 2px;
 }
